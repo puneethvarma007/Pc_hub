@@ -3,7 +3,8 @@ import React from 'react'
 import Image from 'next/image'
 import { auth,signOut,signIn } from '@/auth'
 const  Navbar = async () => {
-    const session = await auth() 
+    const session = await auth()
+    console.log(session , 'session') 
     
   return (
     <div className='px-5 py-3 bg-white shadow-sm font-work-sans'>
