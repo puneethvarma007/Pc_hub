@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { auth,signOut,signIn } from '@/auth'
 const  Navbar = async () => {
     const session = await auth()
-    console.log(session , 'session') 
+    // console.log(session , 'session') 
     
   return (
     <div className='px-5 py-3 bg-white shadow-sm font-work-sans'>
@@ -14,7 +14,7 @@ const  Navbar = async () => {
             </Link>
 
             <div className='flex items-center gap-5 text-black'>
-                {session && session?.user ? (
+                {session?.user ? (
                     <>
                     <Link href='/startup/create'>
                         <span>Create</span>
